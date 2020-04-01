@@ -18,13 +18,15 @@
     "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
+    "esm": "^3.2.25",
+    "isomorphic-unfetch": "^3.0.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "server": "node ./node_modules/babel-cli/bin/babel-node.js --presets env src/server/index.js",
+    "server": "node -r esm src/server/index.js",
     "deploy": "yarn build && surge build react-hooks-js.surge.sh"
   },
   "eslintConfig": {

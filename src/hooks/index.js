@@ -111,7 +111,81 @@ const hooks = {
   useWindowScrollPosition,
   useWindowSize,
 }
+const hooks2 = [
+  useAbortableFetch,
+  useActive,
+  useArray,
+  useAsync,
+  useBattery,
+  useBoolean,
+  useComponentSize,
+  useContextReducer,
+  useCreateStructuredSelector,
+  useCreateSelector,
+  useCreateStateSelector,
+  useDataLoader,
+  useDebounce,
+  useDeviceMotion,
+  useDeviceOrientation,
+  useDocumentTitle,
+  useDocumentVisibility,
+  useDomLocation,
+  useFavicon,
+  useGeolocation,
+  useHover,
+  useInput,
+  useInputValue,
+  useIntersectionObserver,
+  useIntersectionVisibleHook,
+  useInterval,
+  useLifecycles,
+  useLocalStorage,
+  useLocation,
+  useLogger,
+  useMap,
+  useMedia,
+  useMemento,
+  useMount,
+  useNetworkStatus,
+  useNumber,
+  useOnlineStatus,
+  useOnMount,
+  useOnUnmount,
+  usePrevious,
+  usePromiseHook,
+  useRaf,
+  useSetstate,
+  useSpeech,
+  useTimeout,
+  useTimer,
+  useTitle,
+  useToggle,
+  useUnmount,
+  useUpdate,
+  useWait,
+  useWindowCommunication,
+  useWindowMousePosition,
+  useWindowScrollPosition,
+  useWindowSize,
+]
+// console.log(Object.values(hooks))
+// const hookArr = [hooks]
+// console.log(Object.keys(hooks2))
+// console.log(Object.values(hooks2))
 
+const allHooksPre = hooks2.map(function(hook){
+  let item = { name : hook.name, description : hook.description,_tags:"js"}
+  // console.log("hooked item",item)
+  return item
+});
+
+// const allHooks = hookArr.map(function(hook){
+//   let item = { name : hook.name, description : hook.description }
+//   console.log(item)
+//   return item
+// });
+// console.log(allHooks)
+export const allHooks = allHooksPre
 export const hookNames = Object.keys(hooks)
 export function getHook (id) {
   return hooks[id]
