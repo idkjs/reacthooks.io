@@ -6,8 +6,8 @@ export default function Sidebar () {
   return (
     <div className='sidebar'>
       <InstantSearch
-        appId="HL2G9DSLG4"
-        apiKey="b3debf5c2d7872f333a5e14e776b091d"
+        appId="7KHPPMALBH"
+        apiKey="b8dfdd155c2e8865556abdb415126ccf"
         indexName="hooks"
       >
         <Search/>
